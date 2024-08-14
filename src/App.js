@@ -66,8 +66,13 @@ const App = () => {
           onChange={handleSearchChange}
         />
       </Form.Group>
-      <Button onClick={() => handleSortChange('asc')}>Sort Ascending</Button>
-      <Button onClick={() => handleSortChange('desc')}>Sort Descending</Button>
+      <Button style={{ margin: '1%' }} onClick={() => handleSortChange('asc')}>
+        Sort Ascending
+      </Button>
+      <Button onClick={() => handleSortChange('desc')}>
+        Sort Descending
+      </Button>
+
       <Row>
         {paginatedCountries.map(country => (
           <Col key={country.cca2} md={4} className="mb-4">
